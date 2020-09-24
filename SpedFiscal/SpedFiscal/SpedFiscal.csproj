@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A239AF00-079B-4DA2-A9AB-CB5147DDEC5B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpedFiscal</RootNamespace>
+    <AssemblyName>SpedFiscal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ACBrFramework.Net">
+      <HintPath>libs\ACBr\ACBrFramework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>libs\NHibernate\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>libs\NHibernate\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>libs\NHibernate\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\MySQL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>libs\NHibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu">
+      <HintPath>libs\NHibernate\NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\ClienteDTO.cs" />
+    <Compile Include="Model\ContadorDTO.cs" />
+    <Compile Include="Model\EcfImpressoraDTO.cs" />
+    <Compile Include="Model\EcfNotaFiscalCabecalhoDTO.cs" />
+    <Compile Include="Model\EcfR02DTO.cs" />
+    <Compile Include="Model\EcfR03DTO.cs" />
+    <Compile Include="Model\EcfVendaCabecalhoDTO.cs" />
+    <Compile Include="Model\EcfVendaDetalheDTO.cs" />
+    <Compile Include="Model\EmpresaDAL.cs" />
+    <Compile Include="Model\EmpresaDTO.cs" />
+    <Compile Include="Model\EnderecoDTO.cs" />
+    <Compile Include="Model\FiscalApuracaoIcmsDTO.cs" />
+    <Compile Include="Model\FornecedorDTO.cs" />
+    <Compile Include="Model\IDAL.cs" />
+    <Compile Include="Model\NfeCabecalhoDTO.cs" />
+    <Compile Include="Model\NfeCupomFiscalReferenciadoDTO.cs" />
+    <Compile Include="Model\NfeTransporteDTO.cs" />
+    <Compile Include="Model\NHibernateDAL.cs" />
+    <Compile Include="Model\PessoaDTO.cs" />
+    <Compile Include="Model\PessoaFisicaDTO.cs" />
+    <Compile Include="Model\PessoaJuridicaDTO.cs" />
+    <Compile Include="Model\ProdutoAlteracaoItemDTO.cs" />
+    <Compile Include="Model\ProdutoDTO.cs" />
+    <Compile Include="Model\SpedFiscalDAL.cs" />
+    <Compile Include="Model\TransportadoraDTO.cs" />
+    <Compile Include="Model\TributOperacaoFiscalDTO.cs" />
+    <Compile Include="Model\UnidadeConversaoDTO.cs" />
+    <Compile Include="Model\UnidadeProdutoDTO.cs" />
+    <Compile Include="Model\ViewPessoaContadorDTO.cs" />
+    <Compile Include="Model\ViewSpedC190DTO.cs" />
+    <Compile Include="Model\ViewSpedC300DTO.cs" />
+    <Compile Include="Model\ViewSpedC321DTO.cs" />
+    <Compile Include="Model\ViewSpedC370DTO.cs" />
+    <Compile Include="Model\ViewSpedC390DTO.cs" />
+    <Compile Include="Model\ViewSpedC425DTO.cs" />
+    <Compile Include="Model\ViewSpedC490DTO.cs" />
+    <Compile Include="Model\ViewSpedNfeDestinatarioDTO.cs" />
+    <Compile Include="Model\ViewSpedNfeDetalheDTO.cs" />
+    <Compile Include="Model\ViewSpedNfeEmitenteDTO.cs" />
+    <Compile Include="Model\ViewSpedNfeItemDTO.cs" />
+    <Compile Include="NHibernate\NHibernateHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\UMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UMenu.Designer.cs">
+      <DependentUpon>UMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UPreview.Designer.cs">
+      <DependentUpon>UPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\USpedFiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\USpedFiscal.Designer.cs">
+      <DependentUpon>USpedFiscal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\UMenu.resx">
+      <DependentUpon>UMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UPreview.resx">
+      <DependentUpon>UPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\USpedFiscal.resx">
+      <DependentUpon>USpedFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hibernate.cfg.xml" />
+    <Content Include="imgBotoes\21botaoAjuda.png" />
+    <Content Include="imgBotoes\21botaoCalculadora.png" />
+    <Content Include="imgBotoes\21botaoCancelaCupom.png" />
+    <Content Include="imgBotoes\21botaoCancelaItem.png" />
+    <Content Include="imgBotoes\21botaoCliente.png" />
+    <Content Include="imgBotoes\21botaoDesconto.png" />
+    <Content Include="imgBotoes\21botaoEncerraVenda.png" />
+    <Content Include="imgBotoes\21botaoGaveta.png" />
+    <Content Include="imgBotoes\21botaoMenuFiscal.png" />
+    <Content Include="imgBotoes\21botaoMenuOperacoes.png" />
+    <Content Include="imgBotoes\21botaoMenuPrincipal.png" />
+    <Content Include="imgBotoes\21botaoPesquisa.png" />
+    <Content Include="imgBotoes\21botaoSair.png" />
+    <Content Include="imgBotoes\botaoAjuda.png" />
+    <Content Include="imgBotoes\botaoCalculadora.png" />
+    <Content Include="imgBotoes\botaoCancelaCupom.png" />
+    <Content Include="imgBotoes\botaoCancelaItem.png" />
+    <Content Include="imgBotoes\botaoCliente.png" />
+    <Content Include="imgBotoes\botaoDesconto.png" />
+    <Content Include="imgBotoes\botaoEncerraVenda.png" />
+    <Content Include="imgBotoes\botaoGaveta.png" />
+    <Content Include="imgBotoes\botaoMenuFiscal.png" />
+    <Content Include="imgBotoes\botaoMenuOperacoes.png" />
+    <Content Include="imgBotoes\botaoMenuPrincipal.png" />
+    <Content Include="imgBotoes\botaoPesquisa.png" />
+    <Content Include="imgBotoes\botaoSair.png" />
+    <Content Include="imgBotoes\cancelar16.png" />
+    <Content Include="imgBotoes\confirmar16.png" />
+    <EmbeddedResource Include="Model\ClienteDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ContadorDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\EcfImpressoraDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\EcfNotaFiscalCabecalhoDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\EcfR02DTO.hbm.xml" />
+    <EmbeddedResource Include="Model\EcfR03DTO.hbm.xml" />
+    <EmbeddedResource Include="Model\EcfVendaCabecalhoDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\EcfVendaDetalheDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\EmpresaDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\EnderecoDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\FiscalApuracaoIcmsDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\FornecedorDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\NfeCabecalhoDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\NfeCupomFiscalReferenciadoDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\NfeTransporteDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\PessoaDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\PessoaFisicaDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\PessoaJuridicaDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ProdutoAlteracaoItemDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ProdutoDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\TransportadoraDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\TributOperacaoFiscalDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\UnidadeConversaoDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\UnidadeProdutoDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewPessoaContadorDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedC190DTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedC300DTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedC321DTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedC370DTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedC390DTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedC425DTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedC490DTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedNfeDestinatarioDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedNfeDetalheDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedNfeEmitenteDTO.hbm.xml" />
+    <EmbeddedResource Include="Model\ViewSpedNfeItemDTO.hbm.xml" />
+    <None Include="imgTelas\SpedFiscal48.png" />
+    <Content Include="imgTelas\telaSair01.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
